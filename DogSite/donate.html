@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer / Donate | DoggoMart</title>
+  <style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  background:url(download\ \(4\).jpeg.jpg);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+.volunteer-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.volunteer-section h2 {
+  color: #e57c1f;
+  font-size: 32px;
+}
+
+.volunteer-section p {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 20px auto;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+form h3 {
+  color: #e57c1f;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 300px;
+  padding: 10px;
+  margin: 12px;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin: 8px;
+  color: #333;
+}
+
+form button {
+  background: #e57c1f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #d4680d;
+}
+
+.thank-you-msg {
+  margin-top: 20px;
+  font-size: 18px;
+  color: green;
+}
+  </style>
+</head>
+<body>
+
+  <section class="volunteer-section">
+    <h2>🐶 Become a Volunteer or Make a Donation</h2>
+    <p>Help us spread love! You can volunteer or donate items or funds to support our rescue efforts.</p>
+
+    <div class="form-container">
+      <form id="volunteerForm">
+        <h3>Volunteer Registration</h3>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <textarea id="reason" placeholder="Why do you want to volunteer?" rows="4" required></textarea>
+        <button type="submit">Register as Volunteer</button>
+      </form>
+
+      <form id="donationForm">
+        <h3>Make a Donation</h3>
+        <label><input type="checkbox" name="donate" value="Funds"> Funds</label>
+        <label><input type="checkbox" name="donate" value="Dog Food"> Dog Food</label>
+        <label><input type="checkbox" name="donate" value="Accessories"> Accessories</label>
+        <input type="text" id="donorName" placeholder="Your Name" required>
+        <button type="submit">Donate Now</button>
+      </form>
+    </div>
+
+    <div id="thankYouMessage" class="thank-you-msg"></div>
+  </section>
+
+  <script>
+    document.getElementById("volunteerForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  document.getElementById("thankYouMessage").innerText = `Thank you, ${name}, for registering as a volunteer! 🐾`;
+  this.reset();
+});
+
+document.getElementById("donationForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const donorName = document.getElementById("donorName").value;
+  const checked = [...this.querySelectorAll("input[type='checkbox']:checked")].map(cb => cb.value);
+  if (checked.length === 0) {
+    alert("Please select at least one donation type.");
+    return;
+  }
+  document.getElementById("thankYouMessage").innerText = `Thanks, ${donorName}, for donating: ${checked.join(", ")}! 🐶💖`;
+  this.reset();
+});
+
+  </script>
+</body>
+</html>

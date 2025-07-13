@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    z-index: -1;
+
+}
+body{
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f9f6f1;
+    color: #3e2c18;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:120px;
+    padding:20px;
+    background-position: relative;
+    background-color: transparent;
+    background-image: url(https://tint.creativemarket.com/uiZjSs25T_A1byJEb2-71v94IGxfdxx1NFf5-s9ipfc/width:1160/height:774/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzY0Ny82NDcwLzY0NzA3NDIvZG9nLXBhdHRlcm4tby5wbmc?1580759135);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: #355834;
+    letter-spacing: 1px;
+}
+nav {
+    background: linear-gradient(90deg, #9a4c02 70%, #e3b04b 100%);
+    box-shadow: 0 2px 12px rgba(107,79,39,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    display: flex;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+nav ul li a.active, nav ul li a:hover {
+    background: #ff9800;
+    border-radius: 4px;
+}
+nav .logo {
+  height: 50px;
+  margin-right: auto;
+}
+.h1{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+.login_form{
+
+    margin:20px;
+    padding:50px;
+    height:50%;
+    width:400px;
+    display:flex;
+    justify-content: center;
+
+
+}
+.btn1{
+    color: white;
+    background-color: orange;
+    border-color: orange;
+    padding: 5px;
+}
+.Register-form{
+    margin:20px;
+    padding:50px;
+    height:50%;
+    width:400px;
+    display:flex;
+    border: solid;
+    box-shadow: 0 8px 20px gray;
+    border-color: white;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}

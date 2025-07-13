@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="street.css" />
+  <title>Street Dogs</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-dog-paw-print-clipart-paw-logo-with-orange-dots-and-shapes-png-image_11092611.png" alt="Logo" class="logo-img" />
+      <h1 class="Webname">DoggoMart</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="reg.html">Register</a></li>
+    </ul>
+  </header>
+
+  <!-- Filter Panel -->
+  <div class="side-filters closed" id="sideFilters">
+    <button class="filter-toggle" id="filterToggle">☰ Filters</button>
+    <div class="filters-content" id="filtersContent">
+      <h3>Filters</h3>
+
+      <div>
+        <label for="Location"><strong>Location:</strong></label>
+        <select id="locationFilter">
+          <option value="">Select Location</option>
+          <option value="medchal">Medchal</option>
+          <option value="kokapet">Kokapet</option>
+          <option value="kukatpally">Kukatpally</option>
+          <option value="moosapet">Moosapet</option>
+          <option value="secunderabad">Secunderabad</option>
+          <option value="banjara hills">Banjara Hills</option>
+          <option value="jubilee hills">Jubilee Hills</option>
+          <option value="madhapur">Madhapur</option>
+          <option value="gachibowli">Gachibowli</option>
+          <option value="ameerpet">Ameerpet</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ageFilter"><strong>Age:</strong></label>
+        <select id="ageFilter">
+          <option value="">All</option>
+          <option value="0-1">Below 1 year</option>
+          <option value="1-2">1 - 2 years</option>
+          <option value="2-5">2 - 5 years</option>
+          <option value="5">Above 5 years</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="typeFilter"><strong>Dog Type:</strong></label>
+        <select id="typeFilter">
+          <option value="">All</option>
+          <option value="puppy">Puppy</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="GenderFilter"><strong>Gender:</strong></label>
+        <select id="GenderFilter">
+          <option value="">Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="VFilter"><strong>Vaccinated:</strong></label>
+        <select id="VFilter">
+          <option value="">Vaccinated?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- ✅ Apply Filter Button inside filter content -->
+      <div class="filter-btn-wrapper">
+        <button class="apply-filter-btn" onclick="filterDogs()">🎯 Apply Filter</button>
+      </div>
+    </div>
+  </div>
+  <!-- Dogs Section -->
+  <div class="Adoption-dogs" id="Adoption-dogs">
+    <div class="heading"><br>
+      <h1>DOGS AVAILABLE FOR ADOPTION</h1>
+    </div>
+    <div class="street-dogs">
+      <!-- Dog Cards -->
+      <div class="box">
+       <img src="img/street1.jpg" alt="Max" /></a>
+        <h2>Max</h2>
+        <p>Male, Puppy</p>
+        <p>Address: Paw Heaven Shelter, Medchal</p>
+        <p>Age: 0.5</p>
+        <p>Vaccinated: Yes</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box">
+       <img src="img/street2.jpg" alt="Tommy" /></a>
+        <h2>Tommy</h2>
+        <p>Male, Adult</p>
+        <p>Address: Second Chance, Kokapet</p>
+        <p>Age: 3</p>
+        <p>Vaccinated: No</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box">
+       <img src="img/street3.jpg" alt="Ruby" /></a>
+        <h2>Ruby</h2>
+        <p>Female, Adult</p>
+        <p>Address: Bark Shelter, Kukatpally</p>
+        <p>Age: 4</p>
+        <p>Vaccinated: Yes</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box">
+       <img src="img/street4.webp" alt="Grace" /></a>
+        <h2>Grace</h2>
+        <p>Female, Puppy</p>
+        <p>Address: Furry Friends Shelter, Moosapet</p>
+        <p>Age: 0.8</p>
+        <p>Vaccinated: No</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box">
+        <img src="img/street5.webp" alt="Ben" /></a>
+        <h2>Ben</h2>
+        <p>Male, Puppy</p>
+        <p>Address: Second Chance, Kokapet</p>
+        <p>Age: 1</p>
+        <p>Vaccinated: Yes</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box">
+       <img src="img/street6.webp" alt="Snoopy" /></a>
+        <h2>Snoopy</h2>
+        <p>Female, Senior</p>
+        <p>Address: Paw Heaven, Secunderabad</p>
+        <p>Age: 8</p>
+        <p>Vaccinated: No</p><br />
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+
+
+      <div class="box" >
+        <img src="https://www.shutterstock.com/image-photo/animal-outdoor-little-dog-sitting-600nw-2166014475.jpg" alt="Lucky">
+        <h2>Lucky</h2>
+        <p>Male, Puppy</p>
+        <p>Address: DogCare Shelter, Ameerpet</p>
+         <p>Vaccinated: Yes</p>
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box" >
+        <img src="https://thumbs.dreamstime.com/b/curious-street-dog-looking-camera-portraits-old-brown-fur-homeless-cute-indian-female-close-up-lonely-232425444.jpg" alt="Daisy">
+        <h2>Daisy</h2>
+        <p>Female, Adult</p>
+         <p>Address: Safe Paws, Madhapur</p>
+        <p>Vaccinated: Yes</p>
+       
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box" >
+        <img src="https://thumbs.dreamstime.com/b/indian-stray-dog-sitting-road-looking-food-bit-terrified-monkeys-near-him-indian-stray-dog-sitting-road-168865011.jpg" alt="Rocky">
+        <h2>Rocky</h2>
+        <p>Male, Senior</p>
+         <p>Address: Loving Arms Shelter, Banjara Hills</p>
+        <p>Vaccinated: No</p>
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+
+      <div class="box" >
+        <img src="https://www.dogsblog.com/wp-content/uploads/2025/05/487869137_1088374443329688_3462433663763553627_n.webp" alt="Milo">
+        <h2>Milo</h2>
+        <p>Male, Adult</p>
+        <p>Address: Tail Waggers, Gachibowli</p>
+        <p>Vaccinated: Yes</p>
+        <a href="adopt.html" class="btn">Adopt Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Result Message -->
+  <div id="noResult" class="no-result" style="text-align: center; margin-top: 20px; display: none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/620/620851.png" alt="No result" style="width: 120px; margin-bottom: 12px;" />
+    <p style="font-size: 1.1rem; color: #333;">No dogs match your filters. Try adjusting them!</p>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function filterDogs() {
+      const location = document.getElementById('locationFilter').value.toLowerCase();
+      const age = document.getElementById('ageFilter').value;
+      const type = document.getElementById('typeFilter').value.toLowerCase();
+      const gender = document.getElementById('GenderFilter').value.toLowerCase();
+      const vaccinated = document.getElementById('VFilter').value.toLowerCase();
+
+      let anyVisible = false;
+
+      document.querySelectorAll('.box').forEach(box => {
+        const detailsText = box.textContent.toLowerCase();
+
+        const locationMatch = !location || detailsText.includes(location);
+        const ageMatch =
+          !age ||
+          (age === '0-1' && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) < 1) ||
+          (age === '1-2' && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) >= 1 && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) <= 2) ||
+          (age === '2-5' && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) > 2 && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) <= 5) ||
+          (age === '5' && parseFloat(detailsText.match(/age:\s*(\d+(\.\d+)?)/)?.[1]) > 5);
+
+        const typeMatch = !type || detailsText.includes(type);
+        const genderMatch = !gender || detailsText.includes(gender);
+        const vMatch = !vaccinated || detailsText.includes(`vaccinated: ${vaccinated}`);
+        if (locationMatch && ageMatch && typeMatch && genderMatch && vMatch) {
+          box.style.display = '';
+          anyVisible = true;
+        } else {
+          box.style.display = 'none';
+        }
+      });
+
+      document.getElementById('noResult').style.display = anyVisible ? 'none' : 'block';
+    }
+
+    document.getElementById('filterToggle').onclick = function () {
+      document.getElementById('sideFilters').classList.toggle('closed');
+    };
+  </script>
+
+</body>
+</html>

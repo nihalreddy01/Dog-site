@@ -1,0 +1,359 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #fffbe9 0%, #f5b76b 100%);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e57c1f;
+  color: #fff;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(229, 124, 31, 0.08);
+}
+.logo-img {
+  width: 50px;
+}
+.logo{
+  display: flex;
+}
+.Webname{
+  color: white;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #ff6b6b;
+  color: #fffbe9;
+}
+
+/* Heading style */
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Container for dog cards */
+.street-dogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 20px 40px 20px;
+  margin-left: 270px; 
+}
+
+/* Dog card */
+.box {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(229, 124, 31, 0.15);
+}
+
+/* Dog image */
+.box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(229, 124, 31, 0.08);
+}
+
+/* Dog name */
+.box h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Dog info text */
+.box p {
+  color: #444;
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+/* Adopt button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.08);
+}
+
+.btn:hover {
+  background-color: #e94444;
+  transform: scale(1.05);
+}
+
+/* Side Filters Panel */
+.side-filters {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  background: linear-gradient(135deg, #fffbe9 60%, #ffe0b2 100%);
+  border-right: 2px solid #e57c1f;
+  padding: 28px 18px 24px 18px;
+  box-shadow: 2px 0 24px rgba(229, 124, 31, 0.13);
+  z-index: 1001;
+  height: auto;
+  border-radius: 0 18px 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filter-toggle {
+  width: 100%;
+  background: #e57c1f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(229, 124, 31, 0.10);
+  letter-spacing: 1px;
+}
+
+.filter-toggle:hover {
+  background: #ff6b6b;
+  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.13);
+}
+
+.filter-toggle:focus {
+  outline: 2px solid #ffb47b;
+  outline-offset: 2px;
+}
+
+.filters-content {
+  transition: max-height 0.4s ease, opacity 0.3s;
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  background: #fffbe9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(229, 124, 31, 0.06);
+  padding: 10px 0;
+}
+
+.side-filters.closed .filters-content {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.filters-content h3 {
+  margin-top: 0;
+  color: #e57c1f;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.filters-content label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.filters-content select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e57c1f;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(229, 124, 31, 0.06);
+}
+
+.filters-content select:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  background: #fffbe9;
+}
+
+.filters-content div {
+  margin-bottom: 16px;
+}
+
+/* Apply Filter Button */
+.apply-filter-btn {
+  background-color: #e57c1f;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(229, 124, 31, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.apply-filter-btn:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.05);
+}
+.filter-btn-wrapper {
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* No result message */
+.no-result {
+  text-align: center;
+  margin: 50px auto;
+  color: #e94444;
+  font-size: 1.2rem;
+  font-weight: 500;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.no-dog-img {
+  width: 120px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .street-dogs {
+    gap: 16px;
+    margin-left: 0; 
+  }
+  .box {
+    width: 45vw;
+    min-width: 220px;
+  }
+  .side-filters {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    border-right: none;
+    box-shadow: none;
+    height: auto;
+    margin-bottom: 20px;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .filter-toggle {
+    margin-bottom: 0;
+  }
+  .filters-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .box {
+    width: 90vw;
+    min-width: 180px;
+    padding: 12px;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+<section class="register-form">
+    <form class="form" id="registerForm">
+        <h1>REGISTER</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <label for="number">Mobile Number:</label>
+        <input type="text" id="number" placeholder="Enter mobile number" required>
+
+        <button type="submit" class="btn1">Submit</button>
+    </form>
+</section>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const mobile = document.getElementById('number').value.trim();
+
+    // Check if all fields are filled
+    if (!name || !email || !password || !mobile) {
+        alert('Please fill all fields.');
+        return;
+    }
+    
+    // Validate email format
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Validate password length
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters.');
+        return;
+    }
+    
+    // Validate mobile number format (10 digits)
+    if (!/^\d{10}$/.test(mobile)) {
+        alert('Please enter a valid 10-digit mobile number.');
+        return;
+    }
+
+    // Store user data in local storage
+    localStorage.setItem('user', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('pass', password);
+    localStorage.setItem('mobile', mobile);
+
+    alert('Registration successful!');
+    window.location.href = 'login.html';
+});
+</script>
+</body>
+</html>

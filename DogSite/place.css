@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fef9f4;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.success-container {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.check-icon {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #2a9d8f;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home-btn {
+  background-color: #e76f51;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.home-btn:hover {
+  background-color: #d65a3f;
+}

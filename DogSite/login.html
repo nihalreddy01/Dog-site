@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Pawfect Match</title>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+  <div class="container">
+    <form class="login-form" id="loginForm" method="post">
+      <h2>Login</h2>
+
+      <label for="email">Email Address</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit" class="submit-btn">Login</button>
+      <p class="register-link">Don't have an account? <a href="reg.html">Register here</a></p>
+      <p id="loginError" style="color: red;"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const loginUser  = document.getElementById('email').value.trim();
+        const loginPass = document.getElementById('password').value.trim();
+        const email = localStorage.getItem('email');
+        const pass = localStorage.getItem('pass');
+        const loginError = document.getElementById('loginError');
+
+        // Clear previous error message
+        loginError.textContent = "";
+
+        if (email === loginUser  && pass === loginPass) {
+            localStorage.setItem('loggedIn', 'true');
+            window.location.href = 'index.html';
+        } else {
+            loginError.textContent = "Invalid credentials";
+        }
+    });
+  </script>
+</body>
+</html>

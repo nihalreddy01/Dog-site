@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dog Adoption</title>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-dog-paw-print-clipart-paw-logo-with-orange-dots-and-shapes-png-image_11092611.png"alt="Logo" class="logo-img">
+      <h1 class="Webname">DoggoMart</h1><h1 class="Webname">
+    </div>
+    <div class="location-container">
+      <input type="text" id="locationInput" placeholder="Enter your location...">
+      <button id="locateBtn" title="Detect Location">📍</button>
+    </div>
+    <div class="search-container">
+      <input type="text" id="dogSearch" placeholder="Search for a dog breed...">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="reg.html">Register</a></li>
+    </ul>
+  </header>
+  <div class="side-filters closed" id="sideFilters">
+  <button class="filter-toggle" id="filterToggle">☰ Filters</button>
+  <div class="filters-content" id="filtersContent">
+    <h3>Filters</h3>
+    <div>
+      <label for="priceFilter"><strong>Price:</strong></label>
+      <select id="priceFilter">
+        <option value="">All</option>
+        <option value="0-25000">Below ₹25,000</option>
+        <option value="25001-50000">₹25,001 - ₹50,000</option>
+        <option value="50001-100000">₹50,001 - ₹1,00,000</option>
+        <option value="100001">Above ₹1,00,000</option>
+      </select>
+    </div>
+    <div style="margin-top:16px;">
+      <label for="ageFilter"><strong>Age:</strong></label>
+      <select id="ageFilter">
+        <option value="">All</option>
+        <option value="0-1">Below 1 year</option>
+        <option value="1-2">1 - 2 years</option>
+        <option value="2-5">2 - 5 years</option>
+        <option value="5">Above 5 years</option>
+      </select>
+    </div>
+  </div>
+</div>
+  <div class="breeds" id="breeds">
+    <div class="heading">
+      <h1>Available Dogs for Sale</h1>
+    </div>
+    <div class="breeds-container">
+      <div class="box">
+        <a href="" alt="cocker spaniel male">
+        <img src="img/cocker spaniel.male1.jpg" alt="cocker spaniel male"></a>
+        <h2>Cocker Spaniel Male</h2>
+        <p><strong>Price:</strong> ₹40,000</p>
+        <p><strong>Origin:</strong> Spain/England</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 39–41 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kokapet</p>
+        <p><strong>Behaviour:</strong> Gentle, affectionate, playful</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.3adjFJT84GKnVmC2shyo-gHaE7?pid=Api&P=0&h=180" alt="grey husky Female">
+        <h2>Grey Husky Female </h2>
+        <p><strong>Price:</strong> ₹1,45,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 5 years</p>
+        <p><strong>Height:</strong> 57cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Jubilee Hills</p>
+        <p><strong>Behaviour:</strong> Energetic and Adventurous</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/german shepherd female 2.jpg" alt="German Shepherd Female">
+        <h2>German Shepherd Female (Black)</h2>
+        <p><strong>Price:</strong> ₹25,000</p>
+        <p><strong>Origin:</strong> Germany</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 56 cm</p>
+        <p><strong>Lifespan:</strong> 9–13 years</p>
+        <p><strong>Location:</strong>L.B Nagar</p>
+        <p><strong>Behaviour:</strong> Confident, calm, family-friendly</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/golden retriever.male1.jpg" alt="Golden Retriever Male">
+        <h2>Golden Retriever Male</h2>
+        <p><strong>Price:</strong> ₹60,000</p>
+        <p><strong>Origin:</strong> Scotland</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 56–61 cm</p>
+        <p><strong>Lifespan:</strong> 10–12 years</p>
+        <p><strong>Location:</strong>Secunderbad</p>
+        <p><strong>Behaviour:</strong> Friendly, intelligent, devoted</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/shitzhu female2.jpg" alt="Shih Tzu Female Brown & White">
+        <h2>Shih Tzu Female (Brown & White)</h2>
+        <p><strong>Price:</strong> ₹26,000</p>
+        <p><strong>Origin:</strong> Tibet/China</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 24 cm</p>
+        <p><strong>Lifespan:</strong> 10–16 years</p>
+        <p><strong>Location:</strong>Kokapet</p>
+        <p><strong>Behaviour:</strong> Loving, alert, elegant</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.EBBIrKoh7IekS4LQ8607igHaE7?pid=Api&P=0&h=180" alt="black husky female">
+        <h2>Black Husky female</h2>
+        <p><strong>Price:</strong> ₹2,00,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 4 years</p>
+        <p><strong>Height:</strong> 53 cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Jubilee Hills</p>
+        <p><strong>Behaviour:</strong> Energetic and Adventurous</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/cocker spaniel female2.jpg" alt="Cocker Spaniel Brown Female">
+        <h2>Cocker Spaniel Female (Brown)</h2>
+        <p><strong>Price:</strong> ₹41,000</p>
+        <p><strong>Origin:</strong> Spain/England</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 38 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Sweet, family-friendly</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/labrador.black male.jpg" alt="Labrador Retriever male">
+        <h2>Labrador Retriever (Black Male)</h2>
+        <p><strong>Price:</strong> ₹20,000</p>
+        <p><strong>Origin:</strong> Canada</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 57–62 cm</p>
+        <p><strong>Life Span:</strong> 10–14 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Friendly, outgoing, gentle</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/beagle.male1.webp" alt="Beagle male">
+        <h2>Beagle Male</h2>
+        <p><strong>Price:</strong> ₹25,000</p>
+        <p><strong>Origin:</strong> England</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 36–41 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kompally</p>
+        <p><strong>Behaviour:</strong> Curious, playful, gentle</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://petdt.com/wp-content/uploads/2021/05/Do-All-White-Huskies-Have-Blue-Eyes.jpg" alt="white husky female">
+        <h2>Husky Female (white)</h2>
+        <p><strong>Price:</strong> ₹99,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 10 years</p>
+        <p><strong>Height:</strong> 60 cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Kokapet</p>
+        <p><strong>Behaviour:</strong> Energetic and Adventurous</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/german shepherd.female1.jpg" alt="German Shepherd Male">
+        <h2>German Shepherd Male (Sable)</h2>
+        <p><strong>Price:</strong> ₹85,000</p>
+        <p><strong>Origin:</strong> Germany</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 63 cm</p>
+        <p><strong>Lifespan:</strong> 9–13 years</p>
+        <p><strong>Location:</strong>Jubilee Hills</p>
+        <p><strong>Behaviour:</strong> Protective, athletic, trainable</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/golden retriever.female1.jpg" alt="Golden Retriever Female">
+        <h2>Golden Retriever Female</h2>
+        <p><strong>Price:</strong> ₹55,000</p>
+        <p><strong>Origin:</strong> Scotland</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 51–56 cm</p>
+        <p><strong>Lifespan:</strong> 10–12 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Loving, eager to please</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/Beagle-female2.jpg.crdownload" alt="Beagle female">
+        <h2>Beagle Female (Lemon & White)</h2>
+        <p><strong>Price:</strong> ₹22,000</p>
+        <p><strong>Origin:</strong> England</p>
+        <p><strong>Age:</strong> 8 months</p>
+        <p><strong>Height:</strong> 34 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kompally</p>
+        <p><strong>Behaviour:</strong> Intelligent, sweet, alert</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/cocker spaniel male2.jpg" alt="cocker spaniel female">
+        <h2>cocker spaniel Female</h2>
+        <p><strong>Price:</strong> ₹40,000</p>
+        <p><strong>Origin:</strong> Spain/England</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 37–39 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kokapet</p>
+        <p><strong>Behaviour:</strong> Loyal, friendly</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/cocker spaniel female2.jpg" alt="Golden Retriever Female White">
+        <h2>Golden Retriever Female (Cream)</h2>
+        <p><strong>Price:</strong> ₹59,000</p>
+        <p><strong>Origin:</strong> Scotland</p>
+        <p><strong>Age:</strong> 1.8 years</p>
+        <p><strong>Height:</strong> 53 cm</p>
+        <p><strong>Lifespan:</strong> 10–12 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Gentle, affectionate, alert</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/shitzhu male2.jpg" alt="Shih Tzu Male Long Coat">
+        <h2>Shih Tzu Male (Long Coat)</h2>
+        <p><strong>Price:</strong> ₹28,000</p>
+        <p><strong>Origin:</strong> Tibet/China</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 26 cm</p>
+        <p><strong>Lifespan:</strong> 10–16 years</p>
+        <p><strong>Location:</strong>Kompally</p>
+        <p><strong>Behaviour:</strong> Affectionate, calm, gentle</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKJ74YxBWIZYkZ2NNQL1arLEJoUcxbR6Qmw&s" alt="Poodle Male">
+        <h2>Pug Male (Golden)</h2>
+        <p><strong>Price:</strong> ₹42,000</p>
+        <p><strong>Origin:</strong> Germany/France</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 40 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kompally</p>
+        <p><strong>Behaviour:</strong> Cheerful, social, obedient</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+       <!-- Female 2 -->
+      <div class="box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQqXrQE9KCay1HjgFTdHuf3XGC3gvLAzMnQA&s" alt="Poodle Brown Female">
+        <h2>Poodle Female (Brown)</h2>
+        <p><strong>Price:</strong> ₹45,000</p>
+        <p><strong>Origin:</strong> Germany/France</p>
+        <p><strong>Age:</strong> 1 years</p>
+        <p><strong>Height:</strong> 38 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Sweet, family-friendly</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/cocker spaniel.female1.jpg" alt="Cocker Spaniel Golden Male">
+        <h2>Cocker Spaniel Male (Golden)</h2>
+        <p><strong>Price:</strong> ₹42,000</p>
+        <p><strong>Origin:</strong> England</p>
+        <p><strong>Age:</strong> 1.8 years</p>
+        <p><strong>Height:</strong> 40 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kokapet</p>
+        <p><strong>Behaviour:</strong> Cheerful, social, obedient</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/golden retriever male2.jpg" alt="Golden Retriever Male Light Coat">
+        <h2>Golden Retriever Male (Light Coat)</h2>
+        <p><strong>Price:</strong> ₹58,000</p>
+        <p><strong>Origin:</strong> Scotland</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 60 cm</p>
+        <p><strong>Lifespan:</strong> 10–12 years</p>
+        <p><strong>Location:</strong>Jubilee Hills</p>
+        <p><strong>Behaviour:</strong> Calm, obedient, loyal</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/labrador.chocolate male.jpg" alt="Labrador Retriever chocolate male">
+        <h2>Labrador Retriever (Chocolate Male)</h2>
+        <p><strong>Price:</strong> ₹25,000</p>
+        <p><strong>Origin:</strong> Canada</p>
+        <p><strong>Age:</strong> 6 months</p>
+        <p><strong>Height:</strong> 18–20 inches</p>
+        <p><strong>Life Span:</strong> 10–14 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Friendly, outgoing, gentle</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/German shepherd male 2.jpg" alt="German shepherd female">
+        <h2>German shepherd Female</h2>
+        <p><strong>Price:</strong> ₹20,000</p>
+        <p><strong>Origin:</strong> Germany</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 55–60 cm</p>
+        <p><strong>Lifespan:</strong> 9–13 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Brave, hardworking</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/beagle.female.jpg" alt="Beagle male">
+        <h2>Beagle Male (Tricolor)</h2>
+        <p><strong>Price:</strong> ₹26,000</p>
+        <p><strong>Origin:</strong> England</p>
+        <p><strong>Age:</strong> 10 months</p>
+        <p><strong>Height:</strong> 38 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Kompally</p>
+        <p><strong>Behaviour:</strong> Friendly, loyal, active</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/german shepherd.male1.jpg" alt="German shepherd male">
+        <h2>German shepherd male</h2>
+        <p><strong>Price:</strong> ₹80,000</p>
+        <p><strong>Origin:</strong> Germany</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 60–65 cm</p>
+        <p><strong>Lifespan:</strong> 9–13 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Loyal, intelligent, obedient</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRplskaFfpnQi_uLOGVo7p-q1VGNjxcZsnKFw&s" alt="Pug male"></a>
+        <h2>Pug male</h2>
+      <p><strong>Price:</strong>50000</p>
+      <p><strong>Origin:</strong> China</p>
+      <p><strong>Age:</strong> 1.5 years</p>
+      <p><strong>Height:</strong> 36 cm</p>
+      <p><strong>Lifespan:</strong> 12–15 years</p>
+      <p><strong>Location:</strong>Gachibowli</p>
+      <p><strong>Behaviour:</strong> Charming, sociable, calm</p>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      
+      <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDdUSd-f2NJFkmtMMjNJqtqMEdhfZYXD5jHg&s" alt="Pug female">
+        <h2>Pug Female</h2>
+        <p><strong>Price:</strong>52000</p>
+      <p><strong>Origin:</strong> China</p>
+      <p><strong>Age:</strong> 10 months</p>
+      <p><strong>Height:</strong> 32 cm</p>
+      <p><strong>Lifespan:</strong> 12–15 years</p>
+      <p><strong>Location:</strong>SR Nagar</p>
+      <p><strong>Behaviour:</strong> Playful, loyal</p>
+      <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/shitzhu male1.jpg" alt="Shih Tzu Male">
+        <h2>Shih Tzu Male</h2>
+        <p><strong>Price:</strong> ₹25,000</p>
+        <p><strong>Origin:</strong> Tibet/China</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 20–28 cm</p>
+        <p><strong>Lifespan:</strong> 10–16 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Friendly, playful, loving</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/labrador.yellow male.jpg" alt="Labrador Retriever yellow male">
+        <h2>Labrador Retriever (Yellow Male)</h2>
+        <p><strong>Price:</strong> ₹30,000</p>
+        <p><strong>Origin:</strong> Canada</p>
+        <p><strong>Age:</strong> 10 months</p>
+        <p><strong>Height:</strong> 50–55 cm</p>
+        <p><strong>Life Span:</strong> 10–14 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Friendly, outgoing, gentle</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="http://3.bp.blogspot.com/-xVjZJd0VNiQ/TdR36CUNjiI/AAAAAAAAAB8/29SYcUhS8_c/s1600/Siberian-Husky-Puppies.jpg" alt="white husky female">
+        <h2>grey husky male </h2>
+        <p><strong>Price:</strong> ₹70,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Height:</strong> 52cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Gachibowli</p>
+        <p><strong>Behaviour:</strong> Energetic and Adventurous</p><br>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/beagle.male2.jpg" alt="Beagle female">
+        <h2>Beagle Female</h2>
+        <p><strong>Price:</strong> ₹20,000</p>
+        <p><strong>Origin:</strong> England</p>
+        <p><strong>Age:</strong> 1.5 years</p>
+        <p><strong>Height:</strong> 33–38 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>SR Nagar</p>
+        <p><strong>Behaviour:</strong> Social, energetic</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/labrador.yellow female.jpg" alt="Labrador Retriever yellow female">
+        <h2>Labrador Retriever (Yellow Female)</h2>
+        <p><strong>Price:</strong> ₹28,000</p>
+        <p><strong>Origin:</strong> Canada</p>
+        <p><strong>Age:</strong> 10 months</p>
+        <p><strong>Height:</strong> 52 cm</p>
+        <p><strong>Life Span:</strong> 10–14 years</p>
+        <p><strong>Location:</strong>L.B Nagar</p>
+        <p><strong>Behaviour:</strong> Energetic, affectionate, playful</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg" alt="black husky male">
+        <h2>black husky Male</h2>
+        <p><strong>Price:</strong> ₹85,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 2 years</p>
+        <p><strong>Height:</strong> 51 cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Secunderbad</p>
+        <p><strong>Behaviour:</strong>  Energetic and Adventurous</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="img/shitzhu female1.jpg" alt="Shih Tzu Female">
+        <h2>Shih Tzu Female</h2>
+        <p><strong>Price:</strong> ₹24,000</p>
+        <p><strong>Origin:</strong> Tibet/China</p>
+        <p><strong>Age:</strong> 1.2 years</p>
+        <p><strong>Height:</strong> 22–26 cm</p>
+        <p><strong>Lifespan:</strong> 10–16 years</p>
+        <p><strong>Location:</strong>Secunderbad</p>
+        <p><strong>Behaviour:</strong> Calm, alert, cheerful</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScQ5EW35qYf5yoNjsB6hga4ILC-ah3n9A1uw&s" alt="Poodle male">
+        <h2>Poodle male</h2>
+      <p><strong>Price:</strong>50000</p>
+      <p><strong>Origin:</strong> Germany/France</p>
+      <p><strong>Age:</strong>10 months</p>
+      <p><strong>Height:</strong> 36 cm</p>
+      <p><strong>Lifespan:</strong> 12–15 years</p>
+      <p><strong>Location:</strong>L.B Nagar</p>
+      <p><strong>Behaviour:</strong> Intelligent, active, trainable</p>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      
+      <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc43gd1KYHdEYcpqVuhZcZ6vzTXR9hmEMI7w&s" alt="Poodle female">
+        <h2>Poodle Female</h2>
+        <p><strong>Price:</strong>52000</p>
+      <p><strong>Origin:</strong> Germany/France</p>
+      <p><strong>Age:</strong> 1.5 years</p>
+      <p><strong>Height:</strong> 33 cm</p>
+      <p><strong>Lifespan:</strong> 12–15 years</p>
+      <p><strong>Location:</strong>Jubilee Hills</p>
+      <p><strong>Behaviour:</strong> Friendly, loyal, obedient
+      </p>
+      <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+
+      <div class="box">
+        <img src="img/labrador.black female.jpg" alt="Labrador Retriever black female">
+        <h2>Labrador Retriever (Black Female)</h2>
+        <p><strong>Price:</strong> ₹22,000</p>
+        <p><strong>Origin:</strong> Canada</p>
+        <p><strong>Age:</strong> 8 months</p>
+        <p><strong>Height:</strong> 55 cm</p>
+        <p><strong>Life Span:</strong> 10–14 years</p>
+        <p><strong>Location:</strong>Secunderbad</p>
+        <p><strong>Behaviour:</strong> Friendly, intelligent, loyal</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <img src="https://petdogowner.com/wp-content/uploads/2022/10/Image-of-a-Brown-Husky.png" alt="brown husky Male">
+        <h2>brown husky Male</h2>
+        <p><strong>Price:</strong> ₹1,05,000</p>
+        <p><strong>Origin:</strong> Siberia</p>
+        <p><strong>Age:</strong> 3.5 years </p>
+        <p><strong>Height:</strong> 54cm</p>
+        <p><strong>Lifespan:</strong> 10–13 years</p>
+        <p><strong>Location:</strong>Secunderbad</p>
+        <p><strong>Behaviour:</strong>Energetic and Adventurous </p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+      <div class="box">
+        <a href=""alt="Pug Male" >
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmTdRyRRh1CW9C_F0mIMwh19SQnGYeaV5FIw&s" alt="Pug Male">
+        </a>
+        <h2>Pug Male (Golden)</h2>
+        <p><strong>Price:</strong> ₹42,000</p>
+        <p><strong>Origin:</strong> China</p>
+        <p><strong>Age:</strong> 1.8 years</p>
+        <p><strong>Height:</strong> 40 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>L.B Nagar</p>
+        <p><strong>Behaviour:</strong> Cheerful, social, obedient</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+       <!-- Female 2 -->
+      <div class="box">
+        <a href="" alt="Pug Female" >
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ2S50khG7vHSjLDeGFtME5_YJn4S5jdEa6Q&s" alt="Pug Brown Female">
+        </a>
+        <h2>Pug Female (Brown)</h2>
+        <p><strong>Price:</strong> ₹45,000</p>
+        <p><strong>Origin:</strong> China</p>
+        <p><strong>Age:</strong> 1 years</p>
+        <p><strong>Height:</strong> 38 cm</p>
+        <p><strong>Lifespan:</strong> 12–15 years</p>
+        <p><strong>Location:</strong>Jubilee Hills</p>
+        <p><strong>Behaviour:</strong> Sweet, family-friendly</p><br>
+        <a href="chechout.html" class="btn">Buy Now</a>
+      </div>
+
+    </div>
+  </div>
+  <script>
+
+document.getElementById('locationInput').addEventListener('input', filterBreedCards);
+document.getElementById('dogSearch').addEventListener('input', filterBreedCards);
+document.getElementById('priceFilter').addEventListener('change', filterBreedCards);
+document.getElementById('ageFilter').addEventListener('change', filterBreedCards);
+
+function filterBreedCards() {
+  const location = document.getElementById('locationInput').value.trim().toLowerCase();
+  const breed = document.getElementById('dogSearch').value.trim().toLowerCase();
+  const priceRange = document.getElementById('priceFilter').value;
+  const ageRange = document.getElementById('ageFilter').value;
+
+  let anyVisible = false;
+
+  document.querySelectorAll('.box').forEach(box => {
+    const breedName = box.querySelector('h2').textContent.toLowerCase();
+
+    // Location
+    const locationPara = Array.from(box.querySelectorAll('p')).find(p =>
+      p.textContent.toLowerCase().includes('location:')
+    );
+    const locationValue = locationPara
+      ? locationPara.textContent.split(':')[1].trim().toLowerCase()
+      : '';
+
+    // Price
+    const pricePara = Array.from(box.querySelectorAll('p')).find(p =>
+      p.textContent.toLowerCase().includes('price:')
+    );
+    let priceValue = pricePara
+      ? pricePara.textContent.replace(/[^0-9]/g, '')
+      : '';
+    priceValue = priceValue ? parseInt(priceValue, 10) : 0;
+
+    // Age
+    const agePara = Array.from(box.querySelectorAll('p')).find(p =>
+      p.textContent.toLowerCase().includes('age:')
+    );
+    let ageValue = agePara
+      ? agePara.textContent.replace(/[^0-9.]/g, '')
+      : '';
+    ageValue = ageValue ? parseFloat(ageValue) : 0;
+
+    // Price filter logic
+    let priceMatch = true;
+    if (priceRange) {
+      if (priceRange === "0-25000") priceMatch = priceValue <= 25000;
+      else if (priceRange === "25001-50000") priceMatch = priceValue > 25000 && priceValue <= 50000;
+      else if (priceRange === "50001-100000") priceMatch = priceValue > 50000 && priceValue <= 100000;
+      else if (priceRange === "100001") priceMatch = priceValue > 100000;
+    }
+
+    // Age filter logic
+    let ageMatch = true;
+    if (ageRange) {
+      if (ageRange === "0-1") ageMatch = ageValue < 1;
+      else if (ageRange === "1-2") ageMatch = ageValue >= 1 && ageValue <= 2;
+      else if (ageRange === "2-5") ageMatch = ageValue > 2 && ageValue <= 5;
+      else if (ageRange === "5") ageMatch = ageValue > 5;
+    }
+
+    // Show box if all filters match (or are empty)
+    if (
+      (breedName.includes(breed) || !breed) &&
+      (locationValue.includes(location) || !location) &&
+      priceMatch &&
+      ageMatch
+    ) {
+      box.style.display = '';
+      anyVisible = true;
+    } else {
+      box.style.display = 'none';
+    }
+  });
+
+  // Redirect if no boxes are visible
+  if (!anyVisible) {
+    window.location.href = "nodog.html";
+  }
+}
+
+document.getElementById('filterToggle').onclick = function() {
+  document.getElementById('sideFilters').classList.toggle('closed');
+};
+  </script>
+</body>
+</html>

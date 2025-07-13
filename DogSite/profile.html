@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile - DogBuy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-image: url(download\ \(4\).jpeg.jpg);
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .profile-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background-color: #e57c1f;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .profile-header img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-top: 10px;
+    }
+
+    .profile-header h2 {
+      margin-top: 15px;
+    }
+
+    .logout-button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .profile-details {
+      padding: 20px 30px;
+    }
+
+    .info-group {
+      margin-bottom: 15px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .info-value {
+      color: #555;
+    }
+
+    .section-title {
+      margin: 25px 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .dog-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .dog-card {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 10px;
+      width: 140px;
+      text-align: center;
+    }
+
+    .dog-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .dog-card p {
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .dog-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="img/dog selfie.jpg" alt="User  Photo" />
+      <h2>XXXX</h2>
+      <p>Dog Lover | Verified Buyer</p>
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <button class="logout-button " onclick="window.location.href='donate.html'">Donate</button>
+    </div>
+
+    <div class="profile-details">
+      <div class="info-group">
+        <span class="info-label">Email: </span>
+        <span class="info-value">@example.com</span>
+      </div>
+      <div class="info-group">
+        <span class="info-label">Phone: </span>
+        <span class="info-value">+91-9876543210</span>
+      </div>
+      <div class="info-group">
+        <span class="info-label">Location: </span>
+        <span class="info-value">Hyderabad, India</span>
+      </div>
+
+      <div class="section-title">🐶purchased breeds</div>
+      <div class="dog-list">
+        <div class="dog-card">
+          <img src="https://www.dogingtonpost.com/wp-content/uploads/2022/03/Labradors-1-31-years-straight.jpeg" alt="Labrador" />
+          <p>Labrador</p>
+        </div>
+        <div class="dog-card">
+          <img src="https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg" alt="husky"/>
+          <p>husky</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function logout() {
+      window.location.href = 'login.html'; 
+    }
+  </script>
+</body>
+</html>
